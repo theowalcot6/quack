@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <>
             <Navigation />
-            <form className='contact-form' name="contact" action='/pages/contact' method="POST" data-netlify="true">
+            <form className='contact-form' name="contact" action='/' method="POST" data-netlify="true">
                 <div>
                     <label htmlFor="name">
                         Your Name:
