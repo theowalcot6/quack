@@ -1,15 +1,34 @@
 import Navigation from "../components/Navigation";
-import Page from "./page"
 import React from "react";
+import './contact.css'
 
 const Contact = () => {
     return (
-        <>
+    <>
         <Navigation/>
-        <Page
-            title="Contact"
-            content={`Nullam feugiat, quam at fermentum tempor, ante lectus vestibulum tellus, facilisis volutpat libero enim eu lorem. Morbi porta vitae lacus sed euismod. Duis maximus dolor elit, vel porta risus condimentum id. In sagittis, ipsum eget euismod porta, risus massa laoreet nibh, ac volutpat magna neque et diam. `}
-        />
+        <form class='contact-form' name="contact" method="POST" data-netlify="true">
+            <span>
+                <label>
+                    Name
+                    <input type='text'/>
+                </label>
+            </span>
+            <span>
+                <label>
+                    Email
+                    <input name='email' type='email'/>
+                </label>
+            </span>
+            <span>
+                <label>
+                    Message
+                    <textarea name='message' />
+                </label>
+            </span>
+            <span>
+                <button type='submit'>Send</button>
+            </span>
+        </form>
     </>
 )};
 
