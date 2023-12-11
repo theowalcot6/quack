@@ -1,35 +1,36 @@
 import Navigation from "../components/Navigation";
 import React from "react";
-import './contact.css'
+import './contact.css';
 
 const Contact = () => {
     return (
-    <>
-        <Navigation/>
-        <form class='contact-form' name="contact" method="POST" data-netlify="true">
-            <span>
-                <label>
-                    Name
-                    <input type='text'/>
-                </label>
-            </span>
-            <span>
-                <label>
-                    Email
-                    <input name='email' type='email'/>
-                </label>
-            </span>
-            <span>
-                <label>
-                    Message
-                    <textarea name='message' />
-                </label>
-            </span>
-            <span>
-                <button type='submit'>Send</button>
-            </span>
-        </form>
-    </>
-)};
+        <>
+            <Navigation />
+            <form className='contact-form' name="contact" action='/pages/contact' method="POST" data-netlify="true">
+                <div>
+                    <label htmlFor="name">
+                        Your Name:
+                        <input name='name' type='text' id="name" required />
+                    </label>
+                </div>
+                <div>
+                    <label htmlFor="email">
+                        Your Email:
+                        <input name='email' type='email' id="email" required />
+                    </label>
+                </div>
+                <div>
+                    <label htmlFor="message">
+                        Your Message:
+                        <textarea name='message' id="message" required />
+                    </label>
+                </div>
+                <div>
+                    <button type='submit'>Send</button>
+                </div>
+            </form>
+        </>
+    );
+};
 
-export default Contact
+export default Contact;
