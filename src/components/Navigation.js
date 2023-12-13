@@ -1,35 +1,26 @@
 import "../pages/styles.css";
-import { useState } from "react";
-import { Link } from 'gatsby'
+import "./Navigation.css"
 
 import React from "react";
 
-const links = ["about", "portfolio", "services", "contact"];
+const links = ["Work", "Services", "Process", "About Us", "Team", "Contact"];
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isOpen = isMenuOpen ? "open" : "";
 
   return (
-    <>
-      <button className={`burger ${isOpen}`} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open Menu"></button>
-      <div className={`background ${isOpen}`}></div>
-      <div className={`menu ${isOpen}`}>
-        <nav>
-            {links.map((link, index) => (
-                <Link
+    <div class='Navigation'>
+        <h1>LOGO</h1>
+        <ul class='navigation-links'>
+            {links.map((link) => (
+                <li
                 key={link}
-                className={isMenuOpen ? "appear" : ""}
-                style={{ animationDelay: `0.${index + 1}s` }}
-                to={`/${link}`}
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                 {link}
-                </Link>
+                </li>
             ))}
-        </nav>
-      </div>
-    </>
+        </ul>
+        <button>Get in touch with us</button>
+    </div>
   );
 };
 export default Navigation

@@ -1,0 +1,48 @@
+.main {
+    height:calc(100vh - 107px);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/background.png');
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    background-repeat: no-repeat;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 107;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with 50% transparency */
+    z-index: 1; /* Place the overlay above the background image */
+    height:calc(100vh - 107px);
+}
+
+.main-center button {
+    background-color: rgba(255, 255, 255, 1);
+    width:153px;
+    height:66px;
+    border-radius: 10px;
+    z-index:2;
+    font-family: 'Outfit';
+    font-size:20px;
+    font-weight: 400;
+}
+
+.main-center h1 {
+    font-size:78px;
+    font-weight:700;
+    color:white;
+    z-index:2;
+}
+
+.main-center {
+    display:flex;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}

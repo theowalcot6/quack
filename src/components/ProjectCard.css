@@ -1,0 +1,4 @@
+.project_card {
+    min-width: 300px;
+    width:calc(50vw - 210px/2)
+}
