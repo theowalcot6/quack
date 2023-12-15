@@ -3,7 +3,16 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.quackmarketing.co.uk`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        // Other options...
+        icon: `src/favicon.ico`, // Update this path
+      },
+    },
+    // Other plugins...
+  ],
 }
