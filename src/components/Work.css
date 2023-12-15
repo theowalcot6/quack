@@ -1,7 +1,0 @@
-.work {
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    padding:100px;
-    gap:10px;
-}

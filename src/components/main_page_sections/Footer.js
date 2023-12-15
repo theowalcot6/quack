@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "../main_page_sections_stylings/Footer.css";
 
 import React from "react";
 

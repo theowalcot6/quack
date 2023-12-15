@@ -28,4 +28,18 @@
     cursor: pointer;
     outline: none;
   }
+
+  .lets-talk {
+    background-color: rgba(255, 255, 255, 1);
+    width:153px;
+    height:66px;
+    border-radius: 10px;
+    z-index:2;
+    font-family: 'Outfit';
+    font-size:20px;
+    font-weight: 400;
+    position:absolute;
+    top:600px;
+    left:50%;
+}
   

@@ -3,20 +3,23 @@ import "./Navigation.css"
 
 import React from "react";
 
-const links = ["Work", "Services", "Process", "About Us", "Team", "Contact"];
-
-const Navigation = () => {
+const Navigation = ({links, scrollToSection}) => {
+  const handleClick = (link) => {
+    scrollToSection(link);
+  };
 
   return (
     <div class='Navigation'>
         <h1>LOGO</h1>
-        <ul class='navigation-links'>
+        <ul className='navigation-links'>
             {links.map((link) => (
-                <li
-                key={link}
+                <button
+                type="button"
+                id={link}
+                onClick={(link) => handleClick(link)}
                 >
                 {link}
-                </li>
+                </button>
             ))}
         </ul>
         <button>Get in touch with us</button>

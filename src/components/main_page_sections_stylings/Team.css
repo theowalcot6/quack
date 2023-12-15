@@ -1,0 +1,35 @@
+.team h2 {
+    margin:0px;
+    padding-bottom:20px;
+    height:60px;
+    font-weight:500;
+    color:rgba(150, 83, 212, 1);
+    font-size:32px;
+    line-height: 42px;
+}
+
+.team {
+    padding:100px;
+    background-color: rgba(243,243,243,255);
+
+}
+
+.team_card_container {
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    color:white;
+}
+
+.team_card {
+    height:500px;
+    width:250px;
+    background-color: orange;
+    display:flex;
+    justify-content:flex-end;
+    flex-direction:column;
+}
+
+.team_card p {
+    margin:0px;
+}

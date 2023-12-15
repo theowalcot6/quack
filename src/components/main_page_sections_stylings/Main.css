@@ -3,10 +3,13 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/background.png');
+    background-image: url('../../images/background.png');
     background-size: cover; /* Adjust as needed */
     background-position: center; /* Adjust as needed */
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform-origin: center center;
+    transition: transform 0.3s ease-out;
 }
 
 .main::before {
@@ -21,16 +24,7 @@
     height:calc(100vh - 107px);
 }
 
-.main-center button {
-    background-color: rgba(255, 255, 255, 1);
-    width:153px;
-    height:66px;
-    border-radius: 10px;
-    z-index:2;
-    font-family: 'Outfit';
-    font-size:20px;
-    font-weight: 400;
-}
+
 
 .main-center h1 {
     font-size:78px;

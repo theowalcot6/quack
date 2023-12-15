@@ -1,0 +1,40 @@
+.services {
+    background-color: rgba(243,243,243,255);
+    padding:100px 50px 100px 100px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    gap:50px;
+}
+
+.services h2 {
+    margin:0px;
+    padding-bottom:20px;
+    height:60px;
+    font-weight:500;
+    color:rgba(150, 83, 212, 1);
+    font-size:32px;
+    line-height: 42px;
+
+}
+
+.services h6 {
+    font-weight:400;
+    font-size:24px;
+    margin:0px;
+    width:380px;
+    padding-bottom:10px;
+}
+
+.services p {
+    font-size:16px;
+    margin:0px;
+    width:380px;
+}
+
+.service-cards-container {
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+
+}
