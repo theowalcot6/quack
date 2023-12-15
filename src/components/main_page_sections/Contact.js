@@ -13,16 +13,16 @@ const Contact = () => {
             <p>Fill out the form to get in touch!</p>
         </div>
         <form className='contact-form' name="contact" action='#' method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact" />
-                <div className='name-div-form'>
-                    <input type="text" name='firstname' class='name' required='true' placeholder='First Name' />
-                    <input type="text" name='secondname' class='name' required='true' placeholder='Last Name' />
-                </div>
-                <input type="email" name="email" class="email" required='true' placeholder='Email' />
-                <input type="phone" name="phone" class="phone" required='true' placeholder='Phone' />
-                <textarea name='message' class="message" required='true' placeholder='How can we help you?' />
-                <button type="submit">Send Message</button>
-            </form>
+          <input type="hidden" name="form-name" value="contact" />
+          <div className='name-div-form'>
+            <input type="text" name='firstname' class='name' required='true' placeholder='First Name' />
+            <input type="text" name='secondname' class='name' required='true' placeholder='Last Name' />
+          </div>
+          <input type="email" name="email" class="email" required='true' placeholder='Email' />
+          <input type="phone" name="phone" class="phone" required='true' placeholder='Phone' />
+          <textarea name='message' class="message" required='true' placeholder='How can we help you?' />
+          <button type="submit">Send Message</button>
+        </form>
     </div>
   )
 }

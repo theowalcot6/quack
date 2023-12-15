@@ -29,6 +29,8 @@
 
 .contact-form {
     width:500px;
+    display:flex;
+    flex-direction:column;
     gap:10px;
 }
 
@@ -41,6 +43,7 @@
     color: rgba(137, 137, 137, 1);
     font-weight:300;
     padding-left:10px;
+    width:100%;
 
 }
 
@@ -54,6 +57,7 @@
     font-size:14px;
     padding-left:10px;
     padding-top:10px;
+    width:100%;
 }
 
 .name-div-form {
@@ -74,4 +78,5 @@
     font-family:'Outfit';
     border-radius:8px;
     font-weight:300;
+    width:100%;
 }
