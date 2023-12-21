@@ -13,8 +13,8 @@
     left: 50%;
     transform: translateX(-50%);
     z-index:9;
-    overflow-x: scroll;
     gap: 20px; /* Adjust the value as needed */
+    overflow-x: scroll; /* Enable horizontal scrolling */
 }
 
 @media screen and (max-width: 800px) {
@@ -24,6 +24,7 @@
     min-height: 100px;
     width:100vw;
     border-radius: 0px;
+    min-width:0px;
     }
 }
 

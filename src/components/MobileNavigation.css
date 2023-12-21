@@ -27,7 +27,7 @@
   z-index: 20;
   background: rgba(75, 56, 149, 1);
   opacity: 0;
-  transition: 0.6s;
+  transition: 0.05s;
   width:100vw;
   height:calc(100vh - 107px);
 }
@@ -83,7 +83,7 @@ body .menu nav > a:hover {
   text-transform: capitalize;
   opacity: 0;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.05s;
 }
 
 .menu.open a {
@@ -101,25 +101,7 @@ body .menu nav > a:hover {
 }
 
 .appear {
-  animation: appear 0.35s backwards;
-}
-
-.page {
-  padding: 100px 15%;
-  transition: 0.6s;
-}
-
-.page.open {
-  filter: blur(10px);
-}
-
-.page h2 {
-  font-weight: 400;
-}
-
-.page p {
-  line-height: 1.66;
-  opacity: 0.6;
+  animation: appear 0.05s backwards;
 }
 
 .mobile-navigation-links {

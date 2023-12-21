@@ -55,7 +55,7 @@
     width:153px;
     height:66px;
     border-radius: 10px;
-    z-index:2;
+    z-index:20;
     font-family: 'Outfit';
     font-size:20px;
     font-weight: 400;
@@ -88,6 +88,7 @@
     .main-center h1 {
       text-align:center;
       font-size:36px;
+      margin-bottom:40px;
     }
   }
 
