@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    padding:100px;
+    padding:100px 0px 40px 0px;
+    background-color: rgba(243,243,243,255);
 }
 
 .project-cards-container {
@@ -16,6 +17,12 @@
     padding: 0px 60px 60px 60px;
 }
 
+@media screen and (max-width: 520px) {
+    .project-cards-container {
+      padding:0px 20px 20px 20px;
+    }
+  }
+
 .work h2 {
     margin:0px;
     padding-bottom:20px;
@@ -24,7 +31,5 @@
     color:rgba(150, 83, 212, 1);
     font-size:32px;
     line-height: 42px;
-    padding-left:110px;
-
-
+    padding-left:60px;
 }

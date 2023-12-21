@@ -1,8 +1,8 @@
 import "../main_page_sections_stylings/Main.css";
-import React, { useEffect } from "react";
+import React from "react";
 
-const Main = () => {
-  useEffect(() => {
+const Main = ({mainRef, contactRef}) => {
+  /*useEffect(() => {
     const parallaxItem = document.querySelector('.main-center h1');
 
     const handleScroll = () => {
@@ -18,12 +18,23 @@ const Main = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array means this effect runs once after the initial render
+  }, []); // Empty dependency array means this effect runs once after the initial render*/
+
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      const scrollOptions = {
+        behavior: 'smooth',
+        block: 'start',
+      };
+      ref.current.scrollIntoView(scrollOptions);
+    }
+  };
 
   return (
-    <div className='main'>
+    <div className='main' ref={mainRef}>
       <div className='main-center'>
-        <h1>Let's make <br />software together!</h1>
+        <h1>Let's <span className='no_break'>make <sup>&#123; &#125;</sup></span><br />software together!</h1>
+        <button class='lets-talk' onClick={() => scrollToSection(contactRef)}>Let's talk!</button>
       </div>
     </div>
   );

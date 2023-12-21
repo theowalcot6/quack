@@ -1,52 +1,58 @@
 import React from "react";
 import '../main_page_sections_stylings/Services.css'
 
-import ServiceCard from "../ServiceCard";
-
-import card1 from '../../images/card1.png'
-import card2 from '../../images/card2.png'
-import card3 from '../../images/card3.png'
-import card4 from '../../images/card4.png'
+import frame1 from '../../images/Frame 18.png'
+import frame2 from '../../images/Frame 19.png'
+import frame3 from '../../images/Frame 20.png'
+import frame4 from '../../images/Frame 22.png'
+import frame5 from '../../images/Frame 23.png'
+import frame6 from '../../images/Frame 24.png'
 
 const services = {
     'project1': {
-        'name': 'project1',
-        'image' : card1
+        'name': 'Team Survey & Reports',
+        'paragraph' : 'Short, anonymous surveys track your team’s needs weekly so you can focus.',
+        'image' : frame1
     },
     'project2': {
-        'name': 'project2',
-        'image' : card2
+        'name': 'Collaborative 1:1',
+        'paragraph' : 'Build relationships by planning 1-on-1s and start meetings.',
+        'image' : frame2
     },
     'project3': {
-        'name': 'project3',
-        'image' : card3
+        'name': 'Learning Center',
+        'paragraph' : 'Quickly get solutions tailored to your personal challenges from the manager.',
+        'image' : frame3
     },
     'project4': {
-        'name': 'project4',
-        'image' : card4
+        'name': 'Anonymous Messaging',
+        'paragraph' : 'Develop trust in a safe channel for important conversations.',
+        'image' : frame4
     },
     'project5': {
-        'name': 'project5',
-        'image' : card1
+        'name': 'Conversation Engine',
+        'paragraph' : 'Communicate confidently with recommended talking points.',
+        'image' : frame5
     },
     'project6': {
-        'name': 'project6',
-        'image' : card2
+        'name': 'Exclusives Manager',
+        'paragraph' : 'Access manager tips, activities and best practices from our team of experts.',
+        'image' : frame6
     }
 }
 
 const Services = () => {
     return (
         <div className='services'>
-            <div>
                 <h2>Our Services</h2>
-                <h6>At LOGO, we know every business is unique, that's why we cater our services to your business needs</h6>
-                <p>We offer a wide range of services designed to accelerate your brand’s growth. Tell us what you need, and we’ll make it work for you.</p>
-            </div>
             <div className='service-cards-container'>
                 {Object.values(services).map(service => (
-                    <ServiceCard key={service.name} title={service.name} image={service.image} />
-                ))}
+                    <div className='service-container'>
+                    <img src={service.image} alt='service-logo'/>
+                    <h6>{service.name}</h6>
+                    <p>{service.paragraph}</p>
+                    </div>
+                    ))}
             </div>
         </div>
     )

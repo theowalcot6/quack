@@ -1,29 +1,34 @@
-import "../pages/styles.css";
-import "./Navigation.css"
-
+import "./Navigation.css";
 import React from "react";
 
-const Navigation = ({links, scrollToSection}) => {
-  const handleClick = (link) => {
-    scrollToSection(link);
+const Navigation = ({ links, contactRef }) => {
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      const scrollOptions = {
+        behavior: 'smooth',
+        block: 'start',
+      };
+      ref.current.scrollIntoView(scrollOptions);
+    }
   };
 
   return (
-    <div class='Navigation'>
-        <h1>LOGO</h1>
-        <ul className='navigation-links'>
-            {links.map((link) => (
-                <button
-                type="button"
-                id={link}
-                onClick={(link) => handleClick(link)}
-                >
-                {link}
-                </button>
-            ))}
-        </ul>
-        <button>Get in touch with us</button>
-    </div>
+    <>
+      <h1>LOGO</h1>
+      <ul className='navigation-links'>
+        {Object.keys(links).map((link) => (
+          <li
+            key={link} // Don't forget to add a key for each mapped element
+            type="button"
+            onClick={() => scrollToSection(links[link])}
+          >
+            {link}
+          </li>
+        ))}
+      </ul>
+      <button onClick={() => scrollToSection(contactRef)} className='get-in-touch'>Get in touch with us</button>
+    </>
   );
 };
-export default Navigation
+
+export default Navigation;

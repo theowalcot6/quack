@@ -1,15 +1,28 @@
 .project_card_outer {
     min-width: 400px;
     min-height: calc(400px / 654 * 409);
-    width: calc(50vw - 210px / 2);
+    width: 100%;
     height: calc((50vw - 210px / 2) / 654 * 409);
-    max-width: 500px;
-    max-height: calc(500px / 654 * 409);
+    max-width: calc(50vw - 65px);
+    max-height: calc((50vw - 65px) / 654 * 409);
     overflow:hidden;
     transition: transform 0.5s ease-in-out;
     transform-style: preserve-3d;
     transform-origin: center center;
+    border-radius:8px;
 }
+
+@media screen and (max-width: 930px) {
+    .project_card_outer {
+      max-width:100%;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .project_card_outer {
+      min-width:250px;
+    }
+  }
 
 .project_card {
     width:100%;
@@ -22,6 +35,7 @@
     position: relative;
     transition: transform 0.3s ease-in-out; /* Adding transition effect */
     cursor:pointer;
+    border-radius:8px;
 }
 
 .project_card:hover {

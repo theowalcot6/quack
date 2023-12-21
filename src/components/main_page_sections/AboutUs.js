@@ -13,11 +13,11 @@ const AboutUs = () => {
     <div class='about'>
         <div class='about-whole-image-container'>
             <div class='about-first-image-container'>
-                <img src={about1} alt='about-image'/>
+                <img src={about1} alt='about'/>
             </div>
             <div class='about-second-image-container'>
-                <img src={about} alt='about-image'/>
-                <img src={about2} alt='about-image'/>
+                <img src={about} alt='about'/>
+                <img src={about2} alt='about'/>
             </div>
         </div>
         <div class='about-right-side'>

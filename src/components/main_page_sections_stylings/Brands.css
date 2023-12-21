@@ -9,8 +9,26 @@
     top:calc(100vh - 60px);
     height:120px;
     width:90vw;
+    min-width:600px;
     left: 50%;
     transform: translateX(-50%);
     z-index:9;
+    overflow-x: scroll;
+    gap: 20px; /* Adjust the value as needed */
+}
 
+@media screen and (max-width: 800px) {
+    .brands {
+    top:calc(90vw + 45px);
+    height: 20vw;
+    min-height: 100px;
+    width:100vw;
+    border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .brands {
+    top:445px;
+    }
 }

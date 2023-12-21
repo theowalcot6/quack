@@ -1,11 +1,5 @@
-
-.burger,
-.menu {
-  position: fixed;
-}
-
 .burger {
-  z-index: 4;
+  z-index: 40;
   top: 0;
   right: 0;
   display: grid;
@@ -15,6 +9,11 @@
   background-image: url("./menu.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+}
+
+.menu {
+  position:fixed;
 }
 
 .burger.open {
@@ -23,34 +22,35 @@
 
 .background {
   position: fixed;
-  z-index: 2;
-  top: 44px;
-  left: 44px;
-  aspect-ratio: 1 / 1;
-  translate: -50% -50%;
-  height: 88px;
-  background: #07030a;
-  border-radius: 50%;
+  top:107px;
+  left:0px;
+  z-index: 20;
+  background: rgba(75, 56, 149, 1);
   opacity: 0;
   transition: 0.6s;
+  width:100vw;
+  height:calc(100vh - 107px);
 }
 
 .background.open {
-  height: 300vh;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .menu {
-  z-index: 3;
-  top: 0;
+  z-index: 30;
+  position:fixed;
+  top: 107px;
   right: 0;
   display: flex;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start;
+  height:calc(100vh - 107px);
   width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: 0.05s;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .menu nav {
@@ -121,3 +121,49 @@ body .menu nav > a:hover {
   line-height: 1.66;
   opacity: 0.6;
 }
+
+.mobile-navigation-links {
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  font-size:20px;
+  list-style-type: none;
+  font-weight:300;
+  color:white;
+  padding-right:40px;
+  align-items:  flex-start;
+  width:100%;
+
+}
+
+.mobile-get-in-touch {
+    height:66px;
+    padding: 16px, 26px, 16px, 26px;
+    width: 224px;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 1);
+    font-size: 18px;
+    color:rgba(38, 38, 38, 1);
+    font-family: 'Outfit';
+}
+
+.project-in-mind {
+  color:white;
+}
+
+.open-menu-CTA {
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.mobile-navigation-links li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust the margin as needed */
+  border-bottom: 0.5px solid #ffffff; /* Adjust the color and thickness as needed */
+  padding-bottom: 20px; /* Optional: Add padding for spacing between the text and the line */
+  width:100%;
+  cursor:pointer;
+}
+

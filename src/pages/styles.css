@@ -29,17 +29,68 @@
     outline: none;
   }
 
-  .lets-talk {
-    background-color: rgba(255, 255, 255, 1);
-    width:153px;
-    height:66px;
-    border-radius: 10px;
-    z-index:2;
-    font-family: 'Outfit';
-    font-size:20px;
-    font-weight: 400;
-    position:absolute;
-    top:600px;
-    left:50%;
+  .Navigation {
+    width:100vw;
+    height: 107px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    padding:0px 32px 0px 32px;
+    background-color: white;
+    z-index:20;
+    position:fixed;
+    top:0px;
+    left:0px;
+    transition: top 0.3s; /* Add smooth transition for hiding/showing effect */
 }
+
+/* Hide the navigation bar when scrolled down */
+.nav-hidden .fixed-nav {
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 320px) {
+  .Navigation {
+    padding:0px 5vw 0px 5vw;
+  }
+}
+
+.navigation-container {
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.mobile-navigation-container {
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  height: 107px;
+  width:100%;
+  justify-content: space-between;
+}
+
+  @media screen and (max-width: 1030px) {
+    .navigation-container {
+      display:none
+    }
+  }
+
+  @media screen and (min-width: 1030px) {
+    .mobile-navigation-container {
+      display:none
+    }
+  }
   
+.hidden {
+  top:-107px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    padding-top:107px;
+  }
+}

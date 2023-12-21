@@ -8,11 +8,14 @@ import Services from "../components/main_page_sections/Services";
 import Process from "../components/main_page_sections/Process";
 import AboutUs from "../components/main_page_sections/AboutUs";
 import Contact from "../components/main_page_sections/Contact";
+import Navigation from "../components/Navigation"
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { useState } from "react";
 import Team from "../components/main_page_sections/Team";
-import Footer from "../components/main_page_sections/Footer";
+/*import Footer from "../components/main_page_sections/Footer";*/
 import Brands from "../components/main_page_sections/Brands";
+import MobileNavigation from "../components/MobileNavigation";
 
 const IndexPage = () => {
   const mainRef = useRef(null);
@@ -33,36 +36,43 @@ const IndexPage = () => {
     // Add refs for other sections as needed
   };
 
-  const scrollToSection = (ref) => {
-    if (ref.current) {
-      const scrollOptions = {
-        behavior: 'smooth',
-        block: 'start',
-      };
-      ref.current.scrollIntoView(scrollOptions);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > 107) {
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(false); 
+      } else { // if scroll up show the navbar
+        setShow(true);  
+      }
     }
+
+    // remember current page location to use in the next move
+    setLastScrollY(window.scrollY); 
   };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+
+    // cleanup function
+    return () => {
+       window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
 
   return (
     <>
-      <div class='Navigation'>
-          <h1>LOGO</h1>
-          <ul className='navigation-links'>
-              {Object.keys(refsMap).map((link) => (
-                  <li
-                  type="button"
-                  class={`nav-link ${link}`}
-                  onClick={() => scrollToSection(refsMap[link])}
-                  >
-                  {link}
-                  </li>
-              ))}
-          </ul>
-          <button onClick={() => scrollToSection(contactRef)}>Get in touch with us</button>
+      <div className={`Navigation ${show ? '' : 'hidden'} `}>
+        <div className="navigation-container">
+          <Navigation links={refsMap} contactRef={contactRef}/>
+        </div>
+        <div className='mobile-navigation-container'>
+          <MobileNavigation links={refsMap} contactRef={contactRef}/>
+        </div>
       </div>
-      <div ref={mainRef}>
-        <Main />
-        <button class='lets-talk' onClick={() => scrollToSection(contactRef)}>Let's talk!</button>
+      <div className='main-container'>
+        <Main mainRef={mainRef} contactRef={contactRef} />
       </div>
       <Brands/>
       <div ref={workRef}>
@@ -83,7 +93,6 @@ const IndexPage = () => {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <Footer/>
     </>
   )
 }

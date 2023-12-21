@@ -1,5 +1,5 @@
 .main {
-    height:calc(100vh - 107px);
+    height:calc(100vh);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -15,22 +15,21 @@
 .main::before {
     content: "";
     position: absolute;
-    top: 107;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.7); /* Black background with 50% transparency */
     z-index: 1; /* Place the overlay above the background image */
-    height:calc(100vh - 107px);
+    height:calc(100vh);
 }
 
+.main-center sup {
+    color: rgba(150, 83, 212, 1);
+}
 
-
-.main-center h1 {
-    font-size:78px;
-    font-weight:700;
-    color:white;
-    z-index:2;
+.no_break {
+    white-space:nowrap;
 }
 
 .main-center {
@@ -39,4 +38,56 @@
     justify-content: center;
     align-items: center;
     flex-direction:column;
+    padding-right:40px;
+    padding-left:40px;
 }
+
+.main-center h1 {
+    font-size:78px;
+    font-weight:700;
+    color:white;
+    z-index:2;
+    margin-bottom:60px;
+}
+
+.lets-talk {
+    background-color: rgba(255, 255, 255, 1);
+    width:153px;
+    height:66px;
+    border-radius: 10px;
+    z-index:2;
+    font-family: 'Outfit';
+    font-size:20px;
+    font-weight: 400;
+    margin-bottom:100px;
+  }
+
+  .lets-talk:hover {
+    background-color: rgba(220, 220, 220, 1);
+
+  }
+
+  @media screen and (max-width: 800px) {
+    .main-center h1 {
+      text-align:center;
+      font-size:11vw;
+    }
+    
+    .main {
+      height: 90vw;
+      min-height:400px;
+    }
+    .main::before {
+      height:90vw;
+      top:107px;
+      min-height:400px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .main-center h1 {
+      text-align:center;
+      font-size:36px;
+    }
+  }
+

@@ -6,6 +6,35 @@
     gap:50px;
 }
 
+@media screen and (max-width: 1080px) {
+
+    .about-right-side {
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about {
+        justify-content: center;
+        flex-wrap:wrap-reverse;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .about-whole-image-container {
+        width:90vw;
+    } 
+
+    .about img {
+        width:100%;
+    }
+
+    .about {
+        padding:10%;
+    }
+}
+
 .about img {
     border-radius:6px;
 }
@@ -41,4 +70,5 @@
 .about-right-side p {
     font-size:16px;
     margin:0px;
+    font-weight:300;
 }
