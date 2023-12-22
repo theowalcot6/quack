@@ -4,6 +4,7 @@
     align-items: center;
     padding:100px;
     gap:50px;
+    background-color: rgba(243,243,243,255);
 }
 
 @media screen and (max-width: 1080px) {
@@ -71,4 +72,6 @@
     font-size:16px;
     margin:0px;
     font-weight:300;
+    color: rgba(63, 63, 63, 1);
+
 }

@@ -28,10 +28,6 @@
     color: rgba(150, 83, 212, 1);
 }
 
-.no_break {
-    white-space:nowrap;
-}
-
 .main-center {
     display:flex;
     text-align: left;
@@ -47,7 +43,16 @@
     font-weight:700;
     color:white;
     z-index:2;
-    margin-bottom:60px;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.main-center p {
+  font-size:20px;
+  color:white;
+  z-index:2;
+  margin-bottom:50px;
+  margin-top:0px;
 }
 
 .lets-talk {
@@ -70,7 +75,13 @@
   @media screen and (max-width: 800px) {
     .main-center h1 {
       text-align:center;
-      font-size:11vw;
+      font-size:10vw;
+    }
+
+    .main-center p {
+      font-size: 3vw;
+      text-align:center;
+
     }
     
     .main {
@@ -89,10 +100,8 @@
       text-align:center;
       font-size:36px;
     }
-  }
 
-  @media screen and (max-width: 500px) {
-    .main-center h1 {
-      margin-bottom:40px;
+    .main-center p {
+      font-size:16px;
     }
   }

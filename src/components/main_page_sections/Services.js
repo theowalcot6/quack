@@ -10,33 +10,33 @@ import frame6 from '../../images/Frame 24.png'
 
 const services = {
     'project1': {
-        'name': 'Team Survey & Reports',
-        'paragraph' : 'Short, anonymous surveys track your team’s needs weekly so you can focus.',
-        'image' : frame1
+        'name': 'Bespoke software development',
+        'paragraph' : 'Crafting tailored software solutions to empower your business with efficiency and innovation.',
+        'image' : frame5
     },
     'project2': {
-        'name': 'Collaborative 1:1',
-        'paragraph' : 'Build relationships by planning 1-on-1s and start meetings.',
+        'name': 'Digital Strategy',
+        'paragraph' : 'Strategizing digital initiatives to enhance your online presence and drive meaningful engagement.',
         'image' : frame2
     },
     'project3': {
-        'name': 'Learning Center',
-        'paragraph' : 'Quickly get solutions tailored to your personal challenges from the manager.',
+        'name': 'Software Maintenance',
+        'paragraph' : 'Ensuring the health and performance of your software systems through dedicated maintenance services.',
         'image' : frame3
     },
     'project4': {
-        'name': 'Anonymous Messaging',
-        'paragraph' : 'Develop trust in a safe channel for important conversations.',
+        'name': 'User Research',
+        'paragraph' : 'Conducting thorough user research to uncover insights and create user-centric solutions.',
         'image' : frame4
     },
     'project5': {
-        'name': 'Conversation Engine',
-        'paragraph' : 'Communicate confidently with recommended talking points.',
-        'image' : frame5
+        'name': 'Digital Marketing',
+        'paragraph' : 'Boosting your brand visibility and reach through strategic digital marketing campaigns.',
+        'image' : frame1
     },
     'project6': {
-        'name': 'Exclusives Manager',
-        'paragraph' : 'Access manager tips, activities and best practices from our team of experts.',
+        'name': 'Design and Creative',
+        'paragraph' : 'Unleashing creativity and design excellence to bring your visions to life with our expert team.',
         'image' : frame6
     }
 }

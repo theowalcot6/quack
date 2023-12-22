@@ -4,6 +4,7 @@
     padding:100px;
     gap:50px;
     flex-wrap:wrap;
+    background-color: rgba(243,243,243,255);
 }
 
 .contact-support {

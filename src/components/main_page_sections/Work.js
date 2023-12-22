@@ -13,24 +13,31 @@ const projects = {
     description: "blah blah blah",
     tags: ["Web Design", "Web Development", "Research"],
     image: card1,
+    link : 'case-studies/casestudy1'
   },
   project2: {
     name: "project2",
     description: "blah blah blah",
     tags: ["Web Design", "Web Development", "Research"],
     image: card2,
+    link : 'case-studies/casestudy2'
+
   },
   project3: {
     name: "project3",
     description: "blah blah blah",
     tags: ["Web Design", "Web Development", "Research"],
     image: card3,
+    link : 'case-studies/casestudy3'
+
   },
   project4: {
     name: "project4",
     description: "blah blah blah",
     tags: ["Web Design", "Web Development", "Research"],
     image: card4,
+    link : 'case-studies/casestudy4'
+
   },
 };
 
@@ -69,6 +76,7 @@ const Work = () => {
             description={project.description}
             tags={project.tags}
             background={project.image}
+            link = {project.link}
           />
         ))}
         {(!showAllCards && typeof window !== 'undefined' && (window.innerWidth < 931)) ? (

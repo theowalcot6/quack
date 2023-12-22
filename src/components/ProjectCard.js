@@ -1,9 +1,9 @@
 import React from "react"
 import './ProjectCard.css'
-import { useState } from "react";
+import { Link } from "gatsby";
 
-const ProjectCard = ({title, description, tags, background}) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const ProjectCard = ({title, description, tags, background, link}) => {
+  /*const [isFlipped, setIsFlipped] = useState(false);*/
 
   const cardStyle = {
       backgroundImage: `url(${background})`,
@@ -12,19 +12,21 @@ const ProjectCard = ({title, description, tags, background}) => {
       backgroundColor: 'grey',
   };
 
-  const handleCardClick = () => {
+  /*const handleCardClick = () => {
     setIsFlipped(!isFlipped);
-  };
+  };*/
 
   return (
-    <div className={`project_card_outer ${isFlipped ? 'flipped' : ''}`} onClick={handleCardClick}>
+    <div className='project_card_outer'>
+      <Link to={link} className="project_card_link">
         <div className='project_card' style={cardStyle}>
           <div>
           </div>
-          <h1 className={isFlipped ? 'show' : ''}>{title}</h1>
-          <p className={isFlipped ? 'show' : ''}>{description}</p>
-          <p className={isFlipped ? 'show' : ''}>{tags}</p>
+          <h1>{title}</h1>
+          <p >{description}</p>
+          <p >{tags}</p>
         </div>
+        </Link>
     </div>
   )
 }

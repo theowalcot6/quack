@@ -33,7 +33,8 @@ const Main = ({mainRef, contactRef}) => {
   return (
     <div className='main' ref={mainRef}>
       <div className='main-center'>
-        <h1>Let's <span className='no_break'>make <sup>&#123; &#125;</sup></span><br />software together!</h1>
+        <h1>Delivering your digital transformation</h1>
+        <p>Innovate. Design. Deliver. Your software, our expertise.</p>
         <button class='lets-talk' onClick={() => scrollToSection(contactRef)}>Let's talk!</button>
       </div>
     </div>

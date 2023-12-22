@@ -36,24 +36,11 @@
     transition: transform 0.3s ease-in-out; /* Adding transition effect */
     cursor:pointer;
     border-radius:8px;
+
 }
 
 .project_card:hover {
     transform:scale(1.1);
-}
-
-.project_card_outer.flipped {
-    transform: rotateY(180deg);
-}
-
-.project_card_outer .back-content {
-    /* Styles for the back of the card */
-    transform: rotateY(180deg);
-}
-
-
-.show {
-    display:none;
 }
 
 .project_card div {
@@ -71,10 +58,17 @@
     font-size: 24px;
     font-weight: 300;
     z-index:3;
+    color:white;
+
 }
 
 .project_card p {
     font-size: 16px;
     font-weight: 200;
     z-index:3;
+    color:white;
+}
+
+.project_card_link {
+  text-decoration: none;
 }

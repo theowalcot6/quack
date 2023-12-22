@@ -11,7 +11,8 @@
     width:90vw;
     z-index:9;
     gap: 20px; /* Adjust the value as needed */
-    overflow:scroll;
+    overflow-x:scroll;
+    overflow-y: hidden;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -23,7 +24,6 @@
 }
 
 .brands img {
-    width:140px;
     flex-shrink: 0; /* Prevent images from shrinking beyond their specified width */
 }
 
@@ -31,7 +31,7 @@
 @media screen and (max-width: 800px) {
     .brands {
     top:calc(90vw + 45px);
-    height: 20vw;
+    height: 16vw;
     min-height: 100px;
     width:100%;
     border-radius: 0px;

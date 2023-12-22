@@ -22,7 +22,8 @@ const AboutUs = () => {
         </div>
         <div class='about-right-side'>
             <h2>About Us</h2>
-            <p>Concept Softworks is a software company, we develop custom built software for clients - covering everything from financial institutions & medical companies all the way to tech companies and government organizations.</p>
+            <p>
+With over 20 years of direct experience, we are dedicated to assisting you in the efficient and enhanced development of digital products. Having successfully completed over 100 projects, our commitment is underscored by a product-focused approach, ensuring effective problem-solving and innovative solution-building.</p>
         </div>
     </div>
   )
