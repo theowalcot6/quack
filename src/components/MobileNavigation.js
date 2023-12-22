@@ -22,6 +22,8 @@ const MobileNavigation = ({ links, contactRef }) => {
     <>
       <h1>LOGO</h1>
       <button className={`burger ${isOpen}`} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open Menu"></button>
+      { isOpen ? (
+      <>
       <div className={`background ${isOpen}`}></div>
       <div className={`menu ${isOpen}`}>
         <ul className='mobile-navigation-links'>
@@ -40,6 +42,8 @@ const MobileNavigation = ({ links, contactRef }) => {
           <button onClick={() => scrollToSection(contactRef)} className='mobile-get-in-touch'>Let's talk!</button>
         </div>
       </div>
+      </>)
+      : null }
     </>
   );
 };

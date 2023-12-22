@@ -55,7 +55,7 @@
     width:153px;
     height:66px;
     border-radius: 10px;
-    z-index:20;
+    z-index:10;
     font-family: 'Outfit';
     font-size:20px;
     font-weight: 400;
@@ -88,7 +88,11 @@
     .main-center h1 {
       text-align:center;
       font-size:36px;
-      margin-bottom:40px;
     }
   }
 
+  @media screen and (max-width: 500px) {
+    .main-center h1 {
+      margin-bottom:40px;
+    }
+  }

@@ -9,20 +9,31 @@
     top:calc(100vh - 60px);
     height:120px;
     width:90vw;
-    min-width:600px;
-    left: 50%;
-    transform: translateX(-50%);
     z-index:9;
     gap: 20px; /* Adjust the value as needed */
-    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow:scroll;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+@media screen and (max-width: 900px) {
+    .brands {
+        justify-content: flex-start;
+    }
+}
+
+.brands img {
+    width:140px;
+    flex-shrink: 0; /* Prevent images from shrinking beyond their specified width */
+}
+
 
 @media screen and (max-width: 800px) {
     .brands {
     top:calc(90vw + 45px);
     height: 20vw;
     min-height: 100px;
-    width:100vw;
+    width:100%;
     border-radius: 0px;
     min-width:0px;
     }

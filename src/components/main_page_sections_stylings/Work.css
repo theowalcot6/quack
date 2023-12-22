@@ -33,3 +33,14 @@
     line-height: 42px;
     padding-left:60px;
 }
+
+.work button {
+    height:48px;
+    background-color: rgba(150, 83, 212, 1);
+    color:white;
+    font-family:'Outfit';
+    border-radius:4px;
+    font-weight:400;
+    width:100%;
+    font-size:16px;
+}

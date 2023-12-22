@@ -13,11 +13,11 @@ const Brands = () => {
 
   return (
     <div class='brands'>
-        <img src={img} alt='brand_logo' width='140'/>
-        <img src={img1} alt='brand_logo' width='140'/>
-        <img src={img2} alt='brand_logo' width='140'/>
-        <img src={img3} alt='brand_logo' width='140'/>
-        <img src={img4} alt='brand_logo' width='140'/>
+        <img src={img} alt='brand_logo'/>
+        <img src={img1} alt='brand_logo' />
+        <img src={img2} alt='brand_logo' />
+        <img src={img3} alt='brand_logo' />
+        <img src={img4} alt='brand_logo'/>
     </div>
   )
 }

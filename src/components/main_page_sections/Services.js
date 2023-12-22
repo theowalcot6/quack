@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import '../main_page_sections_stylings/Services.css'
 
 import frame1 from '../../images/Frame 18.png'
@@ -42,17 +42,46 @@ const services = {
 }
 
 const Services = () => {
+    const [showAllCards, setShowAllCards] = useState(true);
+
+    useEffect(() => {
+        const handleResize = () => {
+          setShowAllCards(window.innerWidth >= 681);
+        };
+    
+        // Add event listener for window resize
+        window.addEventListener("resize", handleResize);
+    
+        // Initial check on mount
+        handleResize();
+    
+        // Cleanup the event listener on component unmount
+        return () => {
+          window.removeEventListener("resize", handleResize);
+        };
+      }, []);
+    
+      const visibleServices = showAllCards
+        ? Object.values(services)
+        : Object.values(services).slice(0, 3);
+
     return (
         <div className='services'>
                 <h2>Our Services</h2>
             <div className='service-cards-container'>
-                {Object.values(services).map(service => (
+                {visibleServices.map(service => (
                     <div className='service-container'>
                     <img src={service.image} alt='service-logo'/>
                     <h6>{service.name}</h6>
                     <p>{service.paragraph}</p>
                     </div>
                     ))}
+                {(!showAllCards && typeof window !== 'undefined' && (window.innerWidth < 681)) ? (
+                <button onClick={() => setShowAllCards(true)}>View all services</button>
+                ) : null}
+                {(showAllCards && typeof window !== 'undefined' && (window.innerWidth < 681)) ? (
+                <button onClick={() => setShowAllCards(false)}>View less services</button>
+                ) : null}
             </div>
         </div>
     )

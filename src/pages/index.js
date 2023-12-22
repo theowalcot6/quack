@@ -62,7 +62,7 @@ const IndexPage = () => {
   }, [lastScrollY]);
 
   return (
-    <>
+    <div className='app'>
       <div className={`Navigation ${show ? '' : 'hidden'} `}>
         <div className="navigation-container">
           <Navigation links={refsMap} contactRef={contactRef}/>
@@ -93,7 +93,7 @@ const IndexPage = () => {
       <div ref={contactRef}>
         <Contact />
       </div>
-    </>
+    </div>
   )
 }
 
