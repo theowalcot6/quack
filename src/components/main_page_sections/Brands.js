@@ -3,7 +3,7 @@ import "../main_page_sections_stylings/Brands.css";
 import React from "react";
 
 import img from '../../images/eon-next.png'
-import img1 from '../../images/looby.png'
+import img1 from '../../images/Looby.png'
 import img2 from '../../images/runna.png'
 import img3 from '../../images/nissan.png'
 import img4 from '../../images/lolly.png'
