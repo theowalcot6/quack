@@ -51,7 +51,7 @@
   font-size:20px;
   color:white;
   z-index:2;
-  margin-bottom:50px;
+  margin-bottom:30px;
   margin-top:0px;
 }
 
@@ -64,7 +64,7 @@
     font-family: 'Outfit';
     font-size:20px;
     font-weight: 400;
-    margin-bottom:100px;
+    margin-bottom:40px;
   }
 
   .lets-talk:hover {
@@ -82,6 +82,10 @@
       font-size: 3vw;
       text-align:center;
 
+    }
+
+    .lets-talk {
+      margin-bottom:120px;
     }
     
     .main {
@@ -103,5 +107,11 @@
 
     .main-center p {
       font-size:16px;
+    }
+  }
+    @media screen and (max-width: 500px) {
+
+    .lets-talk {
+      margin-bottom:20vw;
     }
   }

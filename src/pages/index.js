@@ -35,6 +35,11 @@ const IndexPage = () => {
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [open,setOpen] = useState(false)
+
+  const stopScroll = (input) => {
+    setOpen(input)
+  }
 
   const controlNavbar = () => {
     if (window.scrollY > 107) {
@@ -60,12 +65,12 @@ const IndexPage = () => {
 
   return (
     <div className='app'>
-      <div className={`Navigation ${show ? '' : 'hidden'} `}>
+      <div className={`Navigation ${!show && !open ? 'hidden' : ''} `}>
         <div className="navigation-container">
           <Navigation links={refsMap} contactRef={contactRef}/>
         </div>
         <div className='mobile-navigation-container'>
-          <MobileNavigation links={refsMap} contactRef={contactRef}/>
+          <MobileNavigation stopScroll = {stopScroll} links={refsMap} contactRef={contactRef}/>
         </div>
       </div>
       <div className='main-container'>

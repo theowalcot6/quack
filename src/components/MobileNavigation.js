@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import React from "react";
 
-const MobileNavigation = ({ links, contactRef }) => {
+const MobileNavigation = ({ links, contactRef, stopScroll }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isOpen = isMenuOpen ? "open" : "";
 
@@ -18,10 +18,17 @@ const MobileNavigation = ({ links, contactRef }) => {
     }
   };
 
+  const overallOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+    stopScroll(!isMenuOpen)
+
+    document.documentElement.style.overflow = isMenuOpen ? 'auto' : 'hidden';
+  }
+
   return (
     <>
       <h1>LOGO</h1>
-      <button className={`burger ${isOpen}`} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open Menu"></button>
+      <button className={`burger ${isOpen}`} onClick={() => overallOpen()} aria-label="Open Menu"></button>
       { isOpen ? (
       <>
       <div className={`background ${isOpen}`}></div>
