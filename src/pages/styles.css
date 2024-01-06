@@ -102,18 +102,20 @@
 
 /* Success Page */
 .success {
-  width:100vw;
+  width:calc(100vw - 80px);
   height:100vh;
   display:flex;
   flex-direction:column;
   justify-content: center;
   align-items: center;
+  margin: 0px 40px;
 }
 
 .success button {
   height:66px;
   padding: 16px, 26px, 16px, 26px;
   width: 224px;
+  max-width:90vw;
   border-radius: 10px;
   background-color: rgba(150, 83, 212, 1);
   font-size: 18px;
@@ -125,4 +127,14 @@
 .success h1 {
   margin-bottom:10px;
   margin-top:40px;
+  text-align:center
+}
+
+.success img {
+  max-height: 120px;
+  max-width: 80vw;
+}
+
+.success p {
+  text-align: center;
 }

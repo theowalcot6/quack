@@ -101,6 +101,12 @@
     }
 }
 
+@media screen and (min-width:851px) and (max-width: 1069px) {
+    .name-div-form input {
+        width:100%;
+    }
+}
+
 
 .contact-form button {
     height:48px;
