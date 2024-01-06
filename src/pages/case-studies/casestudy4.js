@@ -1,12 +1,19 @@
 import React from "react"
 import Page from "../../components/Page.js"
+import casestudy from "../../data/casestudy.js"
+
+const { case4, ...otherCases } = casestudy;
 
 const CaseStudy4 = () => {
-
+  const coredata = case4
+  const secondarydata = otherCases
 
   return (
     <>
-      <Page title='Test3' description='Love it3'/>
+      <Page 
+        coredata={coredata}
+        secondarydata={secondarydata}
+      /> 
     </>
   )
 }

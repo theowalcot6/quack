@@ -12,7 +12,7 @@ const Contact = () => {
             <h2>Contact us today to find out more about how we can help take your business to the next level</h2>
             <p>Fill out the form to get in touch!</p>
         </div>
-        <form className='contact-form' name="contact" action='#' method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form className='contact-form' id="contact" name="contact" action='/success' method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <div className='name-div-form'>
             <input type="text" name='firstname' class='name' required='true' placeholder='First Name' />

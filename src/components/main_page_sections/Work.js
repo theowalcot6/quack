@@ -2,44 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProjectCard from "../ProjectCard";
 import "../main_page_sections_stylings/Work.css";
 
-import card1 from "../../images/card1.png";
-import card2 from "../../images/card2.png";
-import card3 from "../../images/card3.png";
-import card4 from "../../images/card4.png";
-
-const projects = {
-  project1: {
-    name: "project1",
-    description: "blah blah blah",
-    tags: ["Web Design", "Web Development", "Research"],
-    image: card1,
-    link : 'case-studies/casestudy1'
-  },
-  project2: {
-    name: "project2",
-    description: "blah blah blah",
-    tags: ["Web Design", "Web Development", "Research"],
-    image: card2,
-    link : 'case-studies/casestudy2'
-
-  },
-  project3: {
-    name: "project3",
-    description: "blah blah blah",
-    tags: ["Web Design", "Web Development", "Research"],
-    image: card3,
-    link : 'case-studies/casestudy3'
-
-  },
-  project4: {
-    name: "project4",
-    description: "blah blah blah",
-    tags: ["Web Design", "Web Development", "Research"],
-    image: card4,
-    link : 'case-studies/casestudy4'
-
-  },
-};
+import casestudy from "../../data/casestudy";
 
 const Work = () => {
   const [showAllCards, setShowAllCards] = useState(true);
@@ -62,8 +25,8 @@ const Work = () => {
   }, []);
 
   const visibleProjects = showAllCards
-    ? Object.values(projects)
-    : Object.values(projects).slice(0, 2);
+    ? Object.values(casestudy)
+    : Object.values(casestudy).slice(0, 2);
 
   return (
     <div className="work">
@@ -71,12 +34,12 @@ const Work = () => {
       <div className="project-cards-container">
         {visibleProjects.map((project) => (
           <ProjectCard
-            key={project.name}
-            title={project.name}
+            key={project.title}
+            title={project.title}
             description={project.description}
             tags={project.tags}
-            background={project.image}
-            link = {project.link}
+            background={project.backgroundImage}
+            link={`case-studies${project.link.substring(2)}`}
           />
         ))}
         {(!showAllCards && typeof window !== 'undefined' && (window.innerWidth < 931)) ? (

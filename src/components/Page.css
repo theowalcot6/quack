@@ -1,0 +1,143 @@
+.page-cover {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:calc(90vh - 117px);
+    width:100vw;
+}
+
+.page-cover h1 {
+    font-size:68px;
+    font-weight:700;
+    text-align:left;
+    width:40%;
+    margin: 10px 0px;
+    color:white;
+    z-index:2;
+}
+
+.page-cover p {
+    font-size: 20px;
+    font-weight:200;
+    text-align:left;
+    width:40%;
+    color:white;
+    z-index:2;
+}
+
+.page-brief {
+    display:flex;
+    flex-direction:row;
+    margin:100px;
+    gap:280px;
+}
+
+.page-brief-left {
+    width:45%;
+}
+
+.page-brief h3 {
+    color: rgba(150, 83, 212, 1);
+    font-size:28px;
+    font-weight: 600;
+    font-family:'Outfit'
+}
+
+.page-brief p {
+    color:rgba(63, 63, 63, 1);
+    font-size:14px;
+    font-weight: 400;
+    margin-top:0px;
+    line-height: 24px;
+}
+
+.page-brief h6 {
+    color:rgba(150, 83, 212, 1);
+    font-size:16px;
+    font-weight: 500;
+    margin-bottom:0px;
+    margin-top:32px;
+}
+
+.page-first-image {
+    width:100vw;
+    height:80vh;
+}
+
+.page-outcome {
+    display:flex;
+    flex-direction:column;
+    margin:100px;
+    width:45%;
+}
+
+.page-outcome h3 {
+    color: rgba(150, 83, 212, 1);
+    font-size:28px;
+    font-weight: 600;
+    font-family:'Outfit'
+}
+
+.page-outcome p {
+    color:rgba(63, 63, 63, 1);
+    font-size:14px;
+    font-weight: 400;
+    margin-top:0px;
+    line-height: 24px;
+}
+
+.start {
+    height:180px;
+    background-color:rgba(111, 88, 196, 1);
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+}
+
+.start h1 {
+    font-size:42px;
+    color:white;
+    margin:0px;
+}
+
+.lets-talk1 {
+    background-color: rgba(255, 255, 255, 1);
+    width:197px;
+    height:66px;
+    border-radius: 10px;
+    z-index:10;
+    font-family: 'Outfit';
+    font-size:18px;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 1);
+
+  }
+
+  .vertical-line {
+    border-left: 2px solid rgb(255, 255, 255); /* Adjust color and thickness as needed */
+    height: 80px; /* Adjust the height of the line */
+    margin: 0;
+  }
+
+  .page-related {
+        display:flex;
+        flex-direction:column;
+        margin:30px 100px;
+  }
+
+  .page-related h3 {
+    color: rgba(150, 83, 212, 1);
+    font-size:28px;
+    font-weight: 600;
+    font-family:'Outfit'
+  }
+
+  .page-related-container {
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+    overflow-x:scroll;
+  }

@@ -98,3 +98,31 @@
     padding-top:107px;
   }
 }
+
+
+/* Success Page */
+.success {
+  width:100vw;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success button {
+  height:66px;
+  padding: 16px, 26px, 16px, 26px;
+  width: 224px;
+  border-radius: 10px;
+  background-color: rgba(150, 83, 212, 1);
+  font-size: 18px;
+  color:white;
+  font-family: 'Outfit';
+  margin-top:30px;
+}
+
+.success h1 {
+  margin-bottom:10px;
+  margin-top:40px;
+}

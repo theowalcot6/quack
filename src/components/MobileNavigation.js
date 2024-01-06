@@ -1,5 +1,6 @@
 import "./MobileNavigation.css";
 import { useState } from "react";
+import logo from '../images/logo.png'
 
 import React from "react";
 
@@ -27,7 +28,7 @@ const MobileNavigation = ({ links, contactRef, stopScroll }) => {
 
   return (
     <>
-      <h1>LOGO</h1>
+      <img src={logo} alt='logo' height='40' />
       <button className={`burger ${isOpen}`} onClick={() => overallOpen()} aria-label="Open Menu"></button>
       { isOpen ? (
       <>

@@ -1,5 +1,6 @@
 import "./Navigation.css";
 import React from "react";
+import logo from '../images/logo.png'
 
 const Navigation = ({ links, contactRef }) => {
   const scrollToSection = (ref) => {
@@ -14,7 +15,7 @@ const Navigation = ({ links, contactRef }) => {
 
   return (
     <>
-      <h1>LOGO</h1>
+      <img src={logo} alt='logo' height='40'/>
       <ul className='navigation-links'>
         {Object.keys(links).map((link) => (
           <li

@@ -3,7 +3,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../images/background.png');
+    background-image: url('../../images/background.jpg');
     background-size: cover; /* Adjust as needed */
     background-position: center; /* Adjust as needed */
     background-repeat: no-repeat;
@@ -98,20 +98,22 @@
       min-height:400px;
     }
   }
-
+  @media screen and (max-width: 500px) {
+    .main-center p {
+      font-size:16px;
+    }
+  }
   @media screen and (max-width: 400px) {
     .main-center h1 {
       text-align:center;
       font-size:36px;
     }
 
-    .main-center p {
-      font-size:16px;
-    }
   }
     @media screen and (max-width: 500px) {
 
     .lets-talk {
       margin-bottom:20vw;
+      font-size:16px;
     }
   }
