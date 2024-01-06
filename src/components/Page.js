@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import './Page.css'
 import ProjectCard from "./ProjectCard";
 
 const Page = ({ coredata, secondarydata }) => {
+
   const coverStyle = {
     backgroundImage: `url(${coredata.backgroundImage})`,
     backgroundSize: 'cover',
@@ -34,9 +35,30 @@ const Page = ({ coredata, secondarydata }) => {
     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the alpha (last value) for transparency
   };
 
+  const [showVerticalLine, setShowVerticalLine] = useState(true);
+
+  const handleResize = () => {
+    // Set showVerticalLine based on the screen width
+    setShowVerticalLine(window.innerWidth > 660); // Adjust the width as needed
+  };
+
+  useEffect(() => {
+    // Attach event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check for the screen width
+    handleResize();
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className='page'>
       <div className='page-cover' style={coverStyle}>
+      <Link to='/' className='back-to-site'>Back to site</Link>
         <div style={overlayStyle}></div>
         <h1>{coredata.title}</h1>
         <p>{coredata.description}</p>
@@ -49,14 +71,22 @@ const Page = ({ coredata, secondarydata }) => {
           <p>{coredata.brief_description2}</p>
         </div>
         <div className='page-brief-right'>
+          <div>
           <h6>Industry</h6>
           <p>{coredata.industry}</p>
+          </div>
+          <div>
           <h6>Location</h6>
           <p>{coredata.location}</p>
+          </div>
+          <div>
           <h6>Involvement</h6>
           <p>{coredata.involvement}</p>
+          </div>
+          <div>
           <h6>Visit</h6>
           <p>{coredata.visit}</p>
+          </div>
         </div>
       </div>
       <div className="page-first-image" style={firstimageStyle}>
@@ -67,11 +97,11 @@ const Page = ({ coredata, secondarydata }) => {
           <br></br>
           <p>{coredata.brief_description2}</p>
       </div>
-      <div className="page-first-image" style={secondimageStyle}>
+      <div className="page-second-image" style={secondimageStyle}>
       </div>
       <div className='start'>
         <h1>Start your project</h1>
-        <div class="vertical-line"></div>
+        {showVerticalLine && <div className="vertical-line"></div>}
         <Link to='/#contact'>
           <button className='lets-talk1'>
             Let's get started!
@@ -92,8 +122,10 @@ const Page = ({ coredata, secondarydata }) => {
               />
             ))}
         </div>
+        <div class="scroll-indicator">
+          <i class="fas fa-chevron-down"></i>
+        </div>
       </div>
-      <Link to='/'><h1>LOGO</h1></Link>
     </div>
   );
 }

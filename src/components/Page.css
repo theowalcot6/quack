@@ -5,16 +5,26 @@
     align-items: center;
     height:calc(90vh - 117px);
     width:100vw;
+    position:relative;
+}
+
+.back-to-site {
+    position:absolute;
+    top:20px;
+    left:20px;
+    color:white;
+    z-index:10;
 }
 
 .page-cover h1 {
     font-size:68px;
     font-weight:700;
     text-align:left;
-    width:40%;
     margin: 10px 0px;
     color:white;
     z-index:2;
+    min-width:220px;
+    width:40%;
 }
 
 .page-cover p {
@@ -24,6 +34,17 @@
     width:40%;
     color:white;
     z-index:2;
+    min-width:220px;
+
+}
+
+@media (max-width: 970px) { 
+    .page-cover h1 {
+        width:60%;
+    }
+    .page-cover p {
+        width:60%;
+    }
 }
 
 .page-brief {
@@ -36,6 +57,28 @@
 .page-brief-left {
     width:45%;
 }
+
+@media (max-width: 768px) { 
+    .page-brief {
+    flex-direction: column-reverse;
+    gap: 50px; /* Adjust gap for smaller screens */
+    margin: 100px 10vw;
+    width: calc(80vw)
+    }
+  
+    .page-brief-left {
+      width: 100%; /* Full width on smaller screens */
+    }
+
+    .page-brief-right {
+        display:flex;
+        flex-direction:row;
+        gap:10vw;
+        flex-wrap:wrap;
+    }
+  
+    /* Adjust other styles as needed for smaller screens */
+  }
 
 .page-brief h3 {
     color: rgba(150, 83, 212, 1);
@@ -65,11 +108,32 @@
     height:80vh;
 }
 
+.page-second-image {
+    width:100vw;
+    height:80vh;
+}
+
+@media (max-width: 800px) { 
+    .page-first-image {
+        height:50vh;
+    }
+    .page-second-image {
+        height:50vh
+    }
+}
+
 .page-outcome {
     display:flex;
     flex-direction:column;
     margin:100px;
-    width:45%;
+    width:calc(100vw - 200px);
+}
+
+@media (max-width: 768px) { 
+    .page-outcome {
+        margin: 100px 10vw;
+        width: calc(80vw)
+    }
 }
 
 .page-outcome h3 {
@@ -95,12 +159,21 @@
     justify-content: center;
     align-items: center;
     gap:40px;
+    flex-wrap:wrap;
+    padding:0px 20px;
 }
 
 .start h1 {
     font-size:42px;
     color:white;
     margin:0px;
+    text-align:center;
+}
+
+@media (max-width: 578px) { 
+    .start {
+        gap:0px;
+    }
 }
 
 .lets-talk1 {
@@ -116,6 +189,15 @@
 
   }
 
+  @media (max-width: 440px) { 
+    .lets-talk1 {
+        width:90vw;
+    }
+    .start h1 {
+        font-size:10vw;
+    }
+  }
+
   .vertical-line {
     border-left: 2px solid rgb(255, 255, 255); /* Adjust color and thickness as needed */
     height: 80px; /* Adjust the height of the line */
@@ -125,7 +207,18 @@
   .page-related {
         display:flex;
         flex-direction:column;
-        margin:30px 100px;
+        margin:30px 100px 0px 100px;
+        padding-bottom:100px;
+  }
+
+  @media (max-width: 649px) { 
+    .page-related {
+        margin:30px 10vw 0px 10vw;
+
+    }
+    .page-related-container {
+        flex-wrap:wrap;
+    }
   }
 
   .page-related h3 {
@@ -140,4 +233,6 @@
     flex-direction:row;
     gap:30px;
     overflow-x:scroll;
+    min-width:300px;
   }
+
