@@ -24,7 +24,6 @@ const ProjectCard = ({title, description, tags, background, link}) => {
           </div>
           <h1>{title}</h1>
           <p >{description}</p>
-          <p >{tags}</p>
         </div>
         </Link>
     </div>

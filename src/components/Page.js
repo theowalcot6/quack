@@ -85,7 +85,7 @@ const Page = ({ coredata, secondarydata }) => {
           </div>
           <div>
           <h6>Visit</h6>
-          <p>{coredata.visit}</p>
+          <a href={coredata.visit} target="_blank">{coredata.visit}</a>
           </div>
         </div>
       </div>
@@ -93,9 +93,9 @@ const Page = ({ coredata, secondarydata }) => {
       </div>
       <div className='page-outcome'>
           <h3>The Outcome</h3>
-          <p>{coredata.brief_description1}</p>
+          <p>{coredata.outcome_description1}</p>
           <br></br>
-          <p>{coredata.brief_description2}</p>
+          <p>{coredata.outcome_description2}</p>
       </div>
       <div className="page-second-image" style={secondimageStyle}>
       </div>
@@ -117,13 +117,10 @@ const Page = ({ coredata, secondarydata }) => {
                 title={caseData.title}
                 description={caseData.description}
                 tags={caseData.tags}
-                background={caseData.background}
+                background={caseData.backgroundImage}
                 link={caseData.link}
               />
             ))}
-        </div>
-        <div class="scroll-indicator">
-          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
     </div>
