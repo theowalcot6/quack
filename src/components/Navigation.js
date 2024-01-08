@@ -15,7 +15,7 @@ const Navigation = ({ links, contactRef }) => {
 
   return (
     <>
-      <img src={logo} alt='logo' height='40'/>
+      <img src={logo} alt='logo' height='50'/>
       <ul className='navigation-links'>
         {Object.keys(links).map((link) => (
           <li

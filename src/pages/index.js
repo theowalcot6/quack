@@ -98,4 +98,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Quack Agency</title>
+export const Head = () => <title>Orca Design</title>

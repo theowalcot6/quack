@@ -28,7 +28,7 @@ const MobileNavigation = ({ links, contactRef, stopScroll }) => {
 
   return (
     <>
-      <img src={logo} alt='logo' height='40' />
+      <img src={logo} alt='logo' height='50' />
       <button className={`burger ${isOpen}`} onClick={() => overallOpen()} aria-label="Open Menu"></button>
       { isOpen ? (
       <>

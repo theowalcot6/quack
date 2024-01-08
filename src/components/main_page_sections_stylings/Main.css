@@ -47,12 +47,50 @@
     text-align:center;
 }
 
+.main-center h1 b {
+  color: rgba(150, 83, 212, 1);
+}
+
+/* CSS for the dropping effect */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Apply the animation to your title */
+.main-center h1 {
+  animation: dropIn 1s ease-in-out;
+}
+
 .main-center p {
   font-size:20px;
   color:white;
   z-index:2;
   margin-bottom:30px;
   margin-top:0px;
+}
+
+@keyframes dropIn2 {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.main-center p {
+  animation: dropIn2 1.5s ease-in-out;
 }
 
 .lets-talk {
