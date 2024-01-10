@@ -1,0 +1,259 @@
+.page-cover {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:calc(80vh);
+    width:100vw;
+    position:relative;
+}
+
+.back-to-site {
+    position:absolute;
+    top:20px;
+    left:20px;
+    color:white;
+    z-index:10;
+}
+
+.page-cover h1 {
+    font-size:5vw;
+    font-weight:700;
+    text-align:left;
+    margin: 10px 0px;
+    color:white;
+    z-index:2;
+    min-width:220px;
+    width:50%;
+}
+
+.page-cover p {
+    font-size: 20px;
+    font-weight:200;
+    text-align:left;
+    width:50%;
+    color:white;
+    z-index:2;
+    min-width:220px;
+}
+
+@media (max-width: 650px) { 
+    .page-cover p {
+        font-size:14px;
+    }
+
+    .page-cover {
+        height:calc(50vh);
+    }
+}
+
+@media (max-width: 450px) {
+    .page-cover h1 {
+        font-size:22px;
+    }
+}
+
+@media (max-width: 970px) { 
+    .page-cover h1 {
+        width:60%;
+    }
+    .page-cover p {
+        width:60%;
+    }
+}
+
+.page-brief {
+    display:flex;
+    flex-direction:row;
+    margin:100px;
+    gap:280px;
+}
+
+.page-brief-left {
+    width:45%;
+}
+
+@media (max-width: 768px) { 
+    .page-brief {
+    flex-direction: column-reverse;
+    gap: 50px; /* Adjust gap for smaller screens */
+    margin: 100px 10vw;
+    width: calc(80vw)
+    }
+  
+    .page-brief-left {
+      width: 100%; /* Full width on smaller screens */
+    }
+
+    .page-brief-right {
+        display:flex;
+        flex-direction:row;
+        gap:10vw;
+        flex-wrap:wrap;
+    }
+  
+    /* Adjust other styles as needed for smaller screens */
+  }
+
+.page-brief h3 {
+    color: rgba(150, 83, 212, 1);
+    font-size:28px;
+    font-weight: 600;
+    font-family:'Outfit'
+}
+
+.page-brief p {
+    color:rgba(63, 63, 63, 1);
+    font-size:14px;
+    font-weight: 400;
+    margin-top:0px;
+    line-height: 24px;
+}
+
+.page-brief h6 {
+    color:rgba(150, 83, 212, 1);
+    font-size:16px;
+    font-weight: 500;
+    margin-bottom:0px;
+    margin-top:32px;
+}
+
+.page-brief-right a {
+    color:rgba(63, 63, 63, 1);
+    font-size:14px;
+    text-decoration: underline;
+}
+
+.page-first-image {
+    width:100vw;
+    height:60vh;
+}
+
+.page-second-image {
+    width:100vw;
+    height:60vh;
+}
+
+@media (max-width: 800px) { 
+    .page-first-image {
+        height:50vh;
+    }
+    .page-second-image {
+        height:50vh
+    }
+}
+
+.page-outcome {
+    display:flex;
+    flex-direction:column;
+    margin:100px;
+    width:calc(100vw - 200px);
+}
+
+@media (max-width: 768px) { 
+    .page-outcome {
+        margin: 100px 10vw;
+        width: calc(80vw)
+    }
+}
+
+.page-outcome h3 {
+    color: rgba(150, 83, 212, 1);
+    font-size:28px;
+    font-weight: 600;
+    font-family:'Outfit'
+}
+
+.page-outcome p {
+    color:rgba(63, 63, 63, 1);
+    font-size:14px;
+    font-weight: 400;
+    margin-top:0px;
+    line-height: 24px;
+}
+
+.start {
+    height:180px;
+    background-color:rgba(111, 88, 196, 1);
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding:0px 20px;
+}
+
+.start h1 {
+    font-size:42px;
+    color:white;
+    margin:0px;
+    text-align:center;
+}
+
+@media (max-width: 578px) { 
+    .start {
+        gap:0px;
+    }
+}
+
+.lets-talk1 {
+    background-color: rgba(255, 255, 255, 1);
+    width:197px;
+    height:66px;
+    border-radius: 10px;
+    z-index:10;
+    font-family: 'Outfit';
+    font-size:18px;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 1);
+
+  }
+
+  @media (max-width: 440px) { 
+    .lets-talk1 {
+        width:90vw;
+    }
+    .start h1 {
+        font-size:10vw;
+    }
+  }
+
+  .vertical-line {
+    border-left: 2px solid rgb(255, 255, 255); /* Adjust color and thickness as needed */
+    height: 80px; /* Adjust the height of the line */
+    margin: 0;
+  }
+
+  .page-related {
+        display:flex;
+        flex-direction:column;
+        margin:30px 100px 0px 100px;
+        padding-bottom:100px;
+  }
+
+  @media (max-width: 649px) { 
+    .page-related {
+        margin:30px 10vw 0px 10vw;
+
+    }
+    .page-related-container {
+        flex-wrap:wrap;
+    }
+  }
+
+  .page-related h3 {
+    color: rgba(150, 83, 212, 1);
+    font-size:28px;
+    font-weight: 600;
+    font-family:'Outfit'
+  }
+
+  .page-related-container {
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+    overflow-x:scroll;
+    min-width:300px;
+  }
+

@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('../font/Outfit-VariableFont_wght.ttf') format('truetype'); /* Update the path accordingly */
+  /* You can include additional font formats (e.g., woff, woff2) for better browser compatibility */
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    position:relative;
+    margin:0px;
+  }
+
+  .app {
+    overflow:hidden;
+  }
+  
+  body {
+    font-family: 'Outfit', sans-serif; /* Use 'Outfit' as the preferred font, fallback to a generic sans-serif font */
+    color: #272727;
+    background: #ffffff;
+  }
+  
+  button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .Navigation {
+    width:100vw;
+    height: 107px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    padding:0px 32px 0px 32px;
+    background-color: white;
+    z-index:20;
+    position:fixed;
+    top:0px;
+    left:0px;
+    transition: top 0.3s; /* Add smooth transition for hiding/showing effect */
+}
+
+/* Hide the navigation bar when scrolled down */
+.nav-hidden .fixed-nav {
+  transform: translateY(-100%);
+}
+
+@media screen and (max-width: 320px) {
+  .Navigation {
+    padding:0px 5vw 0px 5vw;
+  }
+}
+
+.navigation-container {
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.mobile-navigation-container {
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  height: 107px;
+  width:100%;
+  justify-content: space-between;
+}
+
+  @media screen and (max-width: 1030px) {
+    .navigation-container {
+      display:none
+    }
+  }
+
+  @media screen and (min-width: 1030px) {
+    .mobile-navigation-container {
+      display:none
+    }
+  }
+  
+.hidden {
+  top:-107px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    padding-top:107px;
+  }
+}
+
+
+/* Success Page */
+.success {
+  width:calc(100vw - 80px);
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 40px;
+}
+
+.success button {
+  height:66px;
+  padding: 16px, 26px, 16px, 26px;
+  width: 224px;
+  max-width:90vw;
+  border-radius: 10px;
+  background-color: rgba(150, 83, 212, 1);
+  font-size: 18px;
+  color:white;
+  font-family: 'Outfit';
+  margin-top:30px;
+}
+
+.success h1 {
+  margin-bottom:10px;
+  margin-top:40px;
+  text-align:center
+}
+
+.success img {
+  max-height: 120px;
+  max-width: 80vw;
+}
+
+.success p {
+  text-align: center;
+}

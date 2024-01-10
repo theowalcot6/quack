@@ -1,0 +1,56 @@
+.work {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:100px 0px 40px 0px;
+    background-color: rgba(243,243,243,255);
+}
+
+.project-cards-container {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px 60px 60px;
+}
+
+@media screen and (max-width: 520px) {
+    .project-cards-container {
+      padding:0px 20px 20px 20px;
+    }
+  }
+
+.work h2 {
+    margin:0px;
+    padding-bottom:20px;
+    height:60px;
+    font-weight:500;
+    color:rgba(150, 83, 212, 1);
+    font-size:32px;
+    line-height: 42px;
+}
+
+.work button {
+    height:48px;
+    background-color: rgba(150, 83, 212, 1);
+    color:white;
+    font-family:'Outfit';
+    border-radius:4px;
+    font-weight:400;
+    width:100%;
+    font-size:16px;
+}
+
+.link-button {
+    height: 48px;
+    background-color: rgba(150, 83, 212, 1);
+    color: white;
+    font-family: 'Outfit';
+    border-radius: 4px;
+    font-weight: 400;
+    width: 100%;
+    font-size: 16px;
+}

@@ -1,0 +1,123 @@
+.contact {
+    display:flex;
+    flex-direction:row;
+    padding:100px;
+    gap:50px;
+    flex-wrap:wrap;
+    background-color: rgba(243,243,243,255);
+}
+
+.contact-support {
+    display:flex;
+    flex-direction:column;
+    width:calc(50vw - (250px/2));
+}
+
+.contact-support h3 {
+    color: rgba(63, 63, 63, 1);
+    font-weight:400;
+    font-size:24px;
+}
+
+.contact-support h2 {
+    margin:0px;
+    padding-bottom:20px;
+    font-weight:500;
+    color:rgba(150, 83, 212, 1);
+    font-size:26px;
+    line-height: 42px;
+
+}
+
+.contact-form {
+    width:calc(50vw - (250px/2));
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-width: 300px; 
+    z-index:19;
+}
+
+@media screen and (max-width: 850px) {
+    .contact-form {
+        width:100%;
+        min-width:200px;
+    }
+    .contact-support {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact {
+        padding:10%;
+    }
+}
+
+.contact-form input {
+    height:40px;
+    border-radius: 8px;
+    border:1px solid grey;
+    font-family:'Outfit';
+    font-size:14px;
+    color: rgba(137, 137, 137, 1);
+    font-weight:300;
+    padding-left:10px;
+    width:100%;
+
+}
+
+.contact-form textarea {
+    height:200px;
+    border-radius: 8px;
+    border:1px solid grey;
+    font-family:'Outfit';
+    color: rgba(137, 137, 137, 1);
+    font-weight:300;
+    font-size:14px;
+    padding-left:10px;
+    padding-top:10px;
+    width:100%;
+}
+
+.name-div-form {
+    display:flex;
+    flex-direction:row;
+    width: 100%;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.name-div-form input {
+    width:calc(50% - 5px);
+    min-width:200px;
+}
+
+@media screen and (max-width: 513px) {
+    .name-div-form input {
+        width:100%;
+    }
+}
+
+@media screen and (min-width:851px) and (max-width: 1069px) {
+    .name-div-form input {
+        width:100%;
+    }
+}
+
+
+.contact-form button {
+    height:48px;
+    background-color: rgba(111, 88, 196, 1);
+    color:white;
+    font-family:'Outfit';
+    border-radius:8px;
+    font-weight:300;
+    width:100%;
+}
+
+.contact-form button:hover {
+    background-color: rgba(75, 56, 149, 1);
+}

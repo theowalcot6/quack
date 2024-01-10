@@ -1,0 +1,41 @@
+.navigation-links {
+    display:flex;
+    flex-direction:row;
+    gap:40px;
+    font-size:20px;
+    list-style-type: none;
+    font-weight:300;
+    color: rgba(6, 17, 37, 0.5);
+    padding-right:40px;
+    align-items:  center;
+}
+
+.navigation-links li {
+    cursor:pointer;
+}
+
+.get-in-touch {
+    height:66px;
+    padding: 16px, 26px, 16px, 26px;
+    width: 224px;
+    border-radius: 10px;
+    background-color: rgba(150, 83, 212, 1);
+    font-size: 18px;
+    color:white;
+    font-family: 'Outfit';
+}
+
+.get-in-touch:hover {
+    background-color: rgba(75, 56, 149, 1);
+}
+
+.Navigation h1 {
+    color: rgba(150, 83, 212, 1);
+    width:224px;
+}
+
+.nav-link {
+    color:rgba(6, 17, 37, 0.5);
+    cursor:pointer;
+
+}
