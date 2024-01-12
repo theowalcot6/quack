@@ -26,7 +26,7 @@ const Work = () => {
   }, []);
 
   const visibleProjects = showAllCards
-    ? Object.values(casestudy)
+    ? Object.values(casestudy).slice(0, 4)
     : Object.values(casestudy).slice(0, 2);
 
   return (
@@ -43,13 +43,15 @@ const Work = () => {
             link={`case-studies${project.link.substring(2)}`}
           />
         ))}
+        {/*
         {(!showAllCards && typeof window !== 'undefined' && (window.innerWidth < 931)) ? (
           <button onClick={() => setShowAllCards(true)}>View more projects</button>
         ) : null}
         {(showAllCards && typeof window !== 'undefined' && (window.innerWidth < 931)) ? (
           <button onClick={() => setShowAllCards(false)}>View less projects</button>
         ) : null}
-        <Link to='/case-studies' className='link-button'><button width='200'>See all</button></Link>
+        */}
+        <Link to='/case-studies' className='link-button'><button width='200'>See all projects</button></Link>
 
       </div>
     </div>

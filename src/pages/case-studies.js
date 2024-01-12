@@ -32,7 +32,7 @@ const CaseStudies = () => {
 
     return (
         <div className='CaseStudies'>
-            <Link to='/' className='back-to-site'>Back to site</Link>
+            <Link to='/' className='back-to-site'>Back to main page</Link>
             <div className='case-studies-top' style={backgroundStyle}>
                 <div className='style-div'></div>
                     <h4>CASE STUDIES</h4>

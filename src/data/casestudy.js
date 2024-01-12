@@ -84,6 +84,40 @@ const casestudy = {
     outcome_description1: "Introduced smart energy consumption tracking, allowing users to monitor and optimize their usage, resulting in a 15% reduction in energy consumption.",
     outcome_description2: "Implemented a user-friendly interface, leading to a 20% increase in user satisfaction and a positive response from customers."
   },
+  case5: {
+    title: "Transition from a Digital Asset Management system to Salesforce Marketing Cloud",
+    description: "Led the development of innovative features to enhance the digital capabilities of a leading energy company.",
+    backgroundImage: image3,
+    brief_description1: "Orca Digital collaborated with EON Next, a pioneering energy company, to introduce cutting-edge features for their digital platform.",
+    brief_description2: "The project involved extensive user research, software development, and user experience enhancements, positioning EON Next as an industry innovator.",
+    industry: "Energy",
+    location: "UK",
+    involvement: "User Research",
+    visit: "https://www.eonnext.com",
+    firstimage: case4a,
+    secondimage: case4b,
+    link: "../salesforce",
+    tags: ["Innovation", "Energy Sector", "User Experience"],
+    outcome_description1: "Introduced smart energy consumption tracking, allowing users to monitor and optimize their usage, resulting in a 15% reduction in energy consumption.",
+    outcome_description2: "Implemented a user-friendly interface, leading to a 20% increase in user satisfaction and a positive response from customers."
+  },
+  case6: {
+    title: "Driving Operational Excellence at FarFill through Product Management Transformation",
+    description: "Led the development of innovative features to enhance the digital capabilities of a leading energy company.",
+    backgroundImage: image3,
+    brief_description1: "Orca Digital collaborated with EON Next, a pioneering energy company, to introduce cutting-edge features for their digital platform.",
+    brief_description2: "The project involved extensive user research, software development, and user experience enhancements, positioning EON Next as an industry innovator.",
+    industry: "Energy",
+    location: "UK",
+    involvement: "User Research",
+    visit: "https://www.eonnext.com",
+    firstimage: case4a,
+    secondimage: case4b,
+    link: "../farfill",
+    tags: ["Innovation", "Energy Sector", "User Experience"],
+    outcome_description1: "Introduced smart energy consumption tracking, allowing users to monitor and optimize their usage, resulting in a 15% reduction in energy consumption.",
+    outcome_description2: "Implemented a user-friendly interface, leading to a 20% increase in user satisfaction and a positive response from customers."
+  }
 };
 
 export default casestudy;

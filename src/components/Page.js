@@ -58,7 +58,7 @@ const Page = ({ coredata, secondarydata }) => {
   return (
     <div className='page'>
       <div className='page-cover' style={coverStyle}>
-      <Link to='/case-studies' className='back-to-site'>Back to all</Link>
+      <Link to='/case-studies' className='back-to-site'>Back to all case studies</Link>
         <div style={overlayStyle}></div>
         <h1>{coredata.title}</h1>
         <p>{coredata.description}</p>
