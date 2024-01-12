@@ -51,7 +51,7 @@ const Work = () => {
           <button onClick={() => setShowAllCards(false)}>View less projects</button>
         ) : null}
         */}
-        <Link to='/case-studies' className='link-button'><button width='200'>See all projects</button></Link>
+        <Link to='/case-studies' className='link-text'>See all projects &nbsp; &gt;</Link>
 
       </div>
     </div>

@@ -44,19 +44,24 @@
     font-size:16px;
 }
 
-.link-button {
-    height: 48px;
-    background-color: rgba(150, 83, 212, 1);
-    color: white;
-    font-family: 'Outfit';
+.link-text {
+    color:rgba(150, 83, 212, 1);
     border-radius: 4px;
-    font-weight: 400;
+    font-weight: 500;
+    text-decoration: none;
     width: 100%;
     font-size: 16px;
+    margin: 10px 0px;
 }
 
 @media screen and (min-width: 931px) {
-.link-button {
-    margin: 0px 20px;
+.link-text {
+    margin: 10px 20px;
 }   
+}
+
+@media screen and (max-width: 650px) {
+    .link-text {
+        text-align: center;
+    }  
 }
