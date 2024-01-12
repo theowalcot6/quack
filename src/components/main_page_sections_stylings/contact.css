@@ -1,7 +1,7 @@
 .contact {
     display:flex;
     flex-direction:row;
-    padding:100px;
+    padding:80px;
     gap:50px;
     flex-wrap:wrap;
     background-color: rgba(243,243,243,255);
