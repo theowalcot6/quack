@@ -2,12 +2,12 @@ import React from "react"
 import Page from "../../components/Page.js"
 import casestudy from "../../data/casestudy.js"
 
-const { case2, ...otherCases } = casestudy;
+const { case3, ...otherCases } = casestudy;
 
 
 const CaseStudy2 = () => {
 
-  const coredata = case2
+  const coredata = case3
   const secondarydata = otherCases
 
   return (

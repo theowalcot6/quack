@@ -99,12 +99,13 @@
     color: rgba(150, 83, 212, 1);
     font-size:28px;
     font-weight: 600;
-    font-family:'Outfit'
+    font-family:'Outfit';
+    padding-bottom: 10px;
 }
 
 .page-brief p {
     color:rgba(63, 63, 63, 1);
-    font-size:14px;
+    font-size:15px;
     font-weight: 400;
     margin-top:0px;
     line-height: 24px;
@@ -146,7 +147,7 @@
 .page-outcome {
     display:flex;
     flex-direction:column;
-    margin:100px;
+    margin:70px 100px 100px 100px;
     width:calc(100vw - 200px);
 }
 
@@ -161,12 +162,19 @@
     color: rgba(150, 83, 212, 1);
     font-size:28px;
     font-weight: 600;
-    font-family:'Outfit'
+    font-family:'Outfit';
+    padding-bottom: 10px;
+
+}
+
+.page-outcome h3 {
+    margin-top:30px;
+
 }
 
 .page-outcome p {
     color:rgba(63, 63, 63, 1);
-    font-size:14px;
+    font-size:15px;
     font-weight: 400;
     margin-top:0px;
     line-height: 24px;
@@ -257,3 +265,6 @@
     min-width:300px;
   }
 
+  .break-points {
+    padding-bottom:10px;
+  }

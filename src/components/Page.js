@@ -19,13 +19,6 @@ const Page = ({ coredata, secondarydata }) => {
     position: 'relative',
   };
 
-  const secondimageStyle = {
-    backgroundImage: `url(${coredata.secondimage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    position: 'relative',
-  };
-
   const overlayStyle = {
     position: 'absolute',
     top: 0,
@@ -85,19 +78,30 @@ const Page = ({ coredata, secondarydata }) => {
           </div>
           <div>
           <h6>Visit</h6>
-          <a href={coredata.visit} target="_blank">{coredata.visit}</a>
+          <a href={coredata.visit} target="_blank" rel="noreferrer" >{coredata.visit}</a>
           </div>
         </div>
       </div>
       <div className="page-first-image" style={firstimageStyle}>
       </div>
       <div className='page-outcome'>
-          <h3>The Outcome</h3>
+        <h3>The Process</h3>
+        {Array.isArray(coredata.outcome_description1) ? (
+          coredata.outcome_description1.map((desc, index) => (
+            <p key={index} class='break-points'>{desc}</p>
+          ))
+        ) : (
           <p>{coredata.outcome_description1}</p>
-          <br></br>
+        )}
+        <h3>The Outcome</h3>
+        <br />
+        {Array.isArray(coredata.outcome_description2) ? (
+          coredata.outcome_description2.map((desc, index) => (
+            <p key={index} class='break-points'>{desc}</p>
+          ))
+        ) : (
           <p>{coredata.outcome_description2}</p>
-      </div>
-      <div className="page-second-image" style={secondimageStyle}>
+        )}
       </div>
       <div className='start'>
         <h1>Start your project</h1>
