@@ -91,6 +91,7 @@
 
 .project-in-mind {
   color:white;
+  padding-bottom:10px;
 }
 
 .open-menu-CTA {
@@ -104,7 +105,8 @@
   display: inline-block;
   margin-right: 10px; /* Adjust the margin as needed */
   border-bottom: 0.5px solid #ffffff; /* Adjust the color and thickness as needed */
-  padding-bottom: 20px; /* Optional: Add padding for spacing between the text and the line */
+  padding-bottom: 10px; /* Optional: Add padding for spacing between the text and the line */
+  padding-left:16px;
   width:100%;
   cursor:pointer;
 }
